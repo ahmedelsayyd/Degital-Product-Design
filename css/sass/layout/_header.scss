@@ -1,0 +1,145 @@
+%d-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%heading-rest{
+            text-transform: uppercase;
+            font-weight: bold;
+            line-height: .9;
+}
+
+
+
+
+.menu-activea{
+
+    @include maxMobile{
+        display: block;
+    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 15rem;
+    display: none;
+    background-color: #353441;
+    z-index: 10;
+    transition: transform .5s ease-in-out;
+    h4{
+        position: absolute;
+        left: 15rem;
+        top: 0;
+        font-size: 1.1rem;
+        z-index: 10;
+        background-color: #353441;
+        width: 4.5rem;
+        height: 4.2rem;
+        line-height: 4rem;
+        text-align: center;
+        cursor: pointer;
+        &:hover{
+            background-color: #fff;
+            color: #000;
+          
+        }
+    }
+    
+    ul{
+        overflow: auto;
+
+        li{
+            padding: 1rem;
+            color: #9dc6d1;
+            cursor: pointer;
+            &:nth-of-type(2n){
+                background-color: #3a3947;
+            }
+            &:hover{
+                background-color: $maincolor-blue;
+                color: #fff;
+
+            }
+        }
+    }
+}
+.hide-menu{
+    transform: translateX(-15rem);
+}
+.show-menu{
+    transform: translateX(0);
+}
+
+/*End navbar*/
+.header-container{
+    background-image: url('../image/headerBg.jpg');
+    @include prefixer(background-size,cover,webkit moz o);
+    overflow: hidden;
+}
+
+.header{
+    height: 100%;
+    padding-top: 9rem;
+    @include maxMobile{
+        display: none;
+    }
+    .brand{
+        height: 16.7rem;
+        background-color: rgba($brand-bg-color, .7);
+       @include d-flex;
+        h1{
+            @extend %heading-rest;
+            font-size: 2.6rem;
+           
+        }
+    }
+    .content{
+        width: 100%;
+
+        .finger-i{
+            @include dimentions ($maincolor-carlo, 100%, 12rem);      
+            @include d-flex;
+            @include hover-effect ($maincolor-carlo);
+
+        }
+        .user-i{
+            @include dimentions ($brand-bg-color, 7.5rem, 8rem);      
+            @include d-flex;
+            right: -7.5rem;
+            top: -8rem;
+            @include hover-effect ($brand-bg-color);
+        }
+        .message-i{ 
+            @include dimentions ($maincolor-blush, 7.5rem, 8rem);      
+            @include d-flex;
+            @include hover-effect ($maincolor-blush);
+            right: -15rem;
+            top: 0;
+        }
+        .cam-i{
+            @include dimentions ($brand-bg-color, 7.5rem, 8rem);      
+            right: -7.5rem;
+            top: 8rem;
+            @include d-flex;
+            @include hover-effect ($brand-bg-color);
+        }
+    }
+    .row-bottom{
+        height: 100%;
+        .screen-i{
+            @include dimentions ($maincolor-blue, 100%, 12rem);      
+            @include d-flex;
+            @include hover-effect ($maincolor-blue);
+        }
+        .brand-v{
+            @include dimentions ($brand-bg-color, 100%, 12rem);      
+            @include d-flex;
+            h5{
+                @extend %heading-rest;
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
+

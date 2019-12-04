@@ -1,0 +1,39 @@
+html{
+    font-size: 100%;
+    @include xsMobile{
+        font-size: 90%;
+    }
+}
+body{
+    font-family: 'cairo', sans-serif;
+    color: #fff;
+  
+}
+
+
+
+.blue{
+    background-color: $maincolor-blue;
+}
+.blush{
+    background-color: $maincolor-blush;
+}
+.lavender{
+    background-color: $maincolor-lavender;
+}
+.carlo{
+    background-color: $maincolor-carlo;
+}
+
+.hover-effect{
+    position: absolute;
+    background-color: #fff;
+    height: 301px;
+    width: 50px;
+    opacity: .2;
+    transform: rotate(35deg);
+    z-index: 1;
+    top: -58px;
+    left: -126px;
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
