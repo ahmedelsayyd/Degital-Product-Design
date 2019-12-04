@@ -1,7 +1,7 @@
 # Degital-Product-Design
 ## Languages and Tools:
 - Html5.
-- Css.
+- Css3.
 - Sass.
 - Bootstrap Framework.
 - Jquery
