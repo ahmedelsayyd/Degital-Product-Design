@@ -1,5 +1,5 @@
-# Degital-Product-Design
-## Languages and Tools:
+## Degital-Product-Design
+** Languages and Tools: **
 - Html5.
 - Css3.
 - Sass.
